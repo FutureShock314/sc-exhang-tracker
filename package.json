@@ -1,0 +1,16 @@
+{
+  "name": "sc-exhang-tracker",
+  "module": "index.js",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "eslint": "^9.24.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.5.0"
+  }
+}
