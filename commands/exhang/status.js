@@ -8,7 +8,7 @@ let embed = {
       name: 'Overview',
       value: ':green_square:  :green_square:  :red_square:  :red_square:  :red_square: - { until open }',
     },
-    { name: '\u200b', value: '\u200b' },
+    { name: '\u200b', value: ''},
     {
       name: ':green_square: Light 1',
       value: 'Turned green 25 minutes ago.',
@@ -29,7 +29,7 @@ let embed = {
       name: ':red_square: Light 5',
       value: 'some text here',
     },
-    { name: '\u200b', value: '\u200b' },
+    { name: '\u200b', value: '' },
     {
       name: 'ExHang { open/closed }',
       value: '{ opens/closes } in some number of minutes/hours',
