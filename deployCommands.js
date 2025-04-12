@@ -40,6 +40,7 @@ const rest = new REST().setToken(token);
 			Routes.applicationCommands(clientId),
 			{ body: commands },
 		);
+		console.log(commands)
 
 		console.log(`Successfully reloaded ${data.length} application (/) commands.`);
 	} catch (error) {
