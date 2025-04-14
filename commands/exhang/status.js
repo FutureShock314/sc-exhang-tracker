@@ -1,5 +1,7 @@
 const { SlashCommandBuilder } = require('discord.js');
 
+const cfgPath = '../../cfg.json';
+
 let embed = {
   color: 0x3fd9ac,
   title: 'Executive Hangar Status',

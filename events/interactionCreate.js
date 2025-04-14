@@ -1,5 +1,10 @@
 const { Events, MessageFlags } = require('discord.js');
 
+function getErrorText(err) {
+  let errorText = `There was an error while running this code!\n\`${err}\``;
+  return errorText;
+}
+
 module.exports = {
 	name: Events.InteractionCreate,
 	async execute(interaction) {
@@ -17,9 +22,9 @@ module.exports = {
 		} catch (error) {
 			console.error(error);
 			if (interaction.replied || interaction.deferred) {
-				await interaction.followUp({ content: 'There was an error while executing this command!', flags: MessageFlags.Ephemeral });
+				await interaction.followUp({ content: getErrorText(error), flags: MessageFlags.Ephemeral });
 			} else {
-				await interaction.reply({ content: 'There was an error while executing this command!', flags: MessageFlags.Ephemeral });
+				await interaction.reply({ content: getErrorText(error), flags: MessageFlags.Ephemeral });
 			}
 		}
 	},
